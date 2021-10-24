@@ -1,5 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './app';
+import './app.scss';
 
-const element = <h1>Hellow World</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+);
