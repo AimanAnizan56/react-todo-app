@@ -23,7 +23,13 @@ body {
     margin: 0;
     padding: 0;
 }
+input {
+    font-family: inherit;
 
+    &:focus {
+        outline: none;
+    }
+}
 .container {
     width: 100%;
     max-width: 50rem;
