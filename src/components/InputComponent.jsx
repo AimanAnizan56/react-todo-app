@@ -9,10 +9,7 @@ class InputComponent extends Component {
                     display: 'inline-block',
                 }}
             >
-                <label
-                    htmlFor={'#' + this.props.id}
-                    style={{ display: 'block', marginBottom: '1rem' }}
-                >
+                <label htmlFor={this.props.id} style={{ display: 'block', marginBottom: '1rem' }}>
                     {this.props.name}
                 </label>
                 <input
