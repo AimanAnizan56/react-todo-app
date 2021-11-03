@@ -19,12 +19,8 @@ input[type='text'] {
     border: none;
     border-radius: 0.3125rem;
     box-sizing: inherit;
-    transition: all ease-in-out 200ms;
     box-shadow: none;
-
-    &:focus {
-        outline: 0.125rem solid var(--orange);
-    }
+    transition: all ease-in-out 200ms;
 }
 button {
     all: unset;
@@ -32,12 +28,6 @@ button {
     padding: 0.3125rem 0.9375rem;
     border-radius: 0.3125rem;
     cursor: pointer;
-}
-button:hover {
-    opacity: 0.8;
-}
-button:active {
-    opacity: 1;
 }
 .container {
     width: 100%;

@@ -1,12 +1,21 @@
 .inputField {
     &__card {
-        background: hsl(0, 0%, 24%);
+        background: var(--card);
         border-radius: 0.625rem;
         width: 100%;
         padding: 2rem;
 
         > button {
-            background: hsl(33, 93%, 52%);
+            background: var(--orange);
+            transition: all ease-in-out 200ms;
+
+            &:hover {
+                background: var(--orange-hover);
+            }
+
+            &:active {
+                background: var(--orange);
+            }
         }
     }
 
@@ -21,6 +30,10 @@
 
         > input[type='text'] {
             padding: 0.5rem;
+
+            &:focus {
+                outline: 0.125rem solid var(--orange);
+            }
         }
     }
 }
