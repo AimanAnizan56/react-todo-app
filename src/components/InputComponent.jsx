@@ -6,7 +6,7 @@ const InputComponent = (props) => {
     };
     return (
         <div className="inputField__component">
-            <label htmlFor={props.id} className="inputField__label">
+            <label htmlFor={props.id} className="inputField__component__label">
                 {props.name}
             </label>
             <input type="text" name={props.id} id={props.id} onChange={setInput} />
