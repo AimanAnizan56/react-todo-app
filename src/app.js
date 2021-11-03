@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import InputField from './components/InputField';
-class App extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <h1 className="title">My Todos</h1>
-                <InputField />
-            </React.Fragment>
-        );
-    }
-}
+
+const App = () => {
+    const [todos, setTodos] = useState([]);
+    return (
+        <React.Fragment>
+            <h1 className="title">My Todos</h1>
+            <InputField setTodos={setTodos} todos={todos} />
+        </React.Fragment>
+    );
+};
 
 export default App;
