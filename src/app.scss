@@ -36,6 +36,19 @@ input[type='text'] {
         outline: 0.125rem solid var(--orange);
     }
 }
+button {
+    all: unset;
+    font: inherit;
+    padding: 0.3125rem 0.9375rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 1;
+}
 .container {
     width: 100%;
     max-width: 50rem;
