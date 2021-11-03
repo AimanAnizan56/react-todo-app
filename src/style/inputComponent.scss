@@ -1,0 +1,26 @@
+.inputField {
+    &__card {
+        background: hsl(0, 0%, 24%);
+        border-radius: 0.625rem;
+        width: 100%;
+        padding: 2rem;
+
+        > button {
+            background: hsl(33, 93%, 52%);
+        }
+    }
+
+    &__component {
+        width: 18.75rem;
+        display: inline-block;
+
+        &__label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        > input[type='text'] {
+            padding: 0.5rem;
+        }
+    }
+}
