@@ -7,7 +7,16 @@
 
         > button {
             background: var(--orange);
+            margin: 0 auto;
+            margin-top: 1rem;
+            max-width: 16.875rem;
+            width: 100%;
+            text-align: center;
             transition: all ease-in-out 200ms;
+
+            @include breakpoint(large) {
+                width: auto;
+            }
 
             &:hover {
                 background: var(--orange-hover);
@@ -20,8 +29,13 @@
     }
 
     &__component {
-        width: 18.75rem;
+        width: 16.875rem;
         display: inline-block;
+        margin: 0.3rem 0;
+
+        @include breakpoint(large) {
+            margin: 0.3rem 1rem;
+        }
 
         &__label {
             display: block;
@@ -30,6 +44,7 @@
 
         > input[type='text'] {
             padding: 0.5rem;
+            width: 100%;
 
             &:focus {
                 outline: 0.125rem solid var(--orange);
