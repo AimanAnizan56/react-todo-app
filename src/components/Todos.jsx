@@ -7,13 +7,19 @@ const Todo = ({ todo, todos, setTodos }) => {
         setTodos(todos.filter((el) => el.id !== todo.id));
     };
     const checkHandler = () => {
-        console.log('checkHandler');
+        setTodos(
+            todos.map((el) => {
+                if (el.id === todo.id) {
+                    return { ...el, completed: !el.completed };
+                }
+            })
+        );
     };
 
     return (
         <div className="todos__card">
             <h1 className="todos__card-name">
-                <span>{todo.name}</span>
+                <span className={todo.completed ? 'strike' : null}>{todo.name}</span>
                 <span>
                     <button className="trash" onClick={deleteHandler}>
                         <FontAwesomeIcon icon={faTrashAlt} size="xs" />
@@ -23,7 +29,9 @@ const Todo = ({ todo, todos, setTodos }) => {
                     </button>
                 </span>
             </h1>
-            <p className="todos__card-description">{todo.description}</p>
+            <p className={`todos__card-description${todo.completed ? ' strike' : ''}`}>
+                {todo.description}
+            </p>
         </div>
     );
 };
