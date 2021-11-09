@@ -6,7 +6,8 @@ const InputField = ({ setTodos, todos }) => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
 
-    const buttonHandler = () => {
+    const buttonHandler = (e) => {
+        e.preventDefault();
         if (!(name === '' || description === '')) {
             setTodos([
                 ...todos,
@@ -14,6 +15,7 @@ const InputField = ({ setTodos, todos }) => {
                     id: generate(),
                     name: name,
                     description: description,
+                    completed: false,
                 },
             ]);
             setName('');
@@ -22,7 +24,7 @@ const InputField = ({ setTodos, todos }) => {
     };
 
     return (
-        <div className="inputField__card">
+        <form className="inputField__card">
             <InputComponent name="Name" id="inputName" setInputText={setName} inputText={name} />
             <InputComponent
                 name="Description"
@@ -30,8 +32,10 @@ const InputField = ({ setTodos, todos }) => {
                 setInputText={setDescription}
                 inputText={description}
             />
-            <button onClick={buttonHandler}>Add Todo</button>
-        </div>
+            <button type="submit" onClick={buttonHandler}>
+                Add Todo
+            </button>
+        </form>
     );
 };
 
