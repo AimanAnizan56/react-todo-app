@@ -9,6 +9,10 @@
     --orange-hover: hsl(33, 80%, 46%);
 
     --card: hsl(0, 0%, 24%);
+    --trash: hsla(0, 70%, 51%, 0.6);
+    --trash-hover: hsla(0, 70%, 51%, 1);
+    --check: hsla(120, 53%, 45%, 0.6);
+    --check-hover: hsla(120, 53%, 45%, 1);
 }
 
 @import './style/breakpoints';
