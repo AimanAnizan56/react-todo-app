@@ -8,7 +8,7 @@ const App = () => {
         <React.Fragment>
             <h1 className="title">My Todos</h1>
             <InputField setTodos={setTodos} todos={todos} />
-            <TodoList todos={todos} />
+            <TodoList todos={todos} setTodos={setTodos} />
         </React.Fragment>
     );
 };
