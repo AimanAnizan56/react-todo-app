@@ -9,7 +9,7 @@ const InputComponent = (props) => {
             <label htmlFor={props.id} className="inputField__component__label">
                 {props.name}
             </label>
-            <input type="text" name={props.id} id={props.id} onChange={setInput} />
+            <input type="text" onChange={setInput} value={props.inputText} />
         </div>
     );
 };
