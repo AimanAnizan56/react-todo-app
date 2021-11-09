@@ -23,27 +23,43 @@
             color: var(--orange);
 
             > span {
+                transition: all ease-in-out 300ms;
+                &.strike {
+                    text-decoration: line-through;
+                    opacity: 0.7;
+                }
+
                 > .trash {
                     all: unset;
-                    color: hsla(0, 70%, 51%, 0.8);
+                    color: var(--trash);
                     margin-right: 1rem;
                     cursor: pointer;
+                    transition: all ease-in-out 150ms;
 
                     &:hover {
-                        color: hsla(0, 70%, 51%, 1);
+                        color: var(--trash-hover);
                     }
                 }
 
                 > .check {
                     all: unset;
-                    color: hsla(120, 42%, 40%, 0.8);
+                    color: var(--check);
                     margin-right: 1rem;
                     cursor: pointer;
+                    transition: all ease-in-out 150ms;
 
                     &:hover {
-                        color: hsla(120, 42%, 40%, 1);
+                        color: var(--check-hover);
                     }
                 }
+            }
+        }
+
+        &-description {
+            transition: all ease-in-out 300ms;
+            &.strike {
+                text-decoration: line-through;
+                opacity: 0.7;
             }
         }
     }
