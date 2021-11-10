@@ -45,6 +45,7 @@ const App = () => {
             <FilterDropdown
                 toggle={toggle}
                 setToggle={setToggle}
+                filteredStatus={filteredStatus}
                 setFilteredStatus={setFilteredStatus}
             />
             <TodoList todos={todos} setTodos={setTodos} filteredTodos={filteredTodos} />
