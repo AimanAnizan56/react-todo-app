@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
-const FilterDropdown = ({ toggle, setToggle, setFilteredStatus }) => {
+const FilterDropdown = ({ toggle, setToggle, filteredStatus, setFilteredStatus }) => {
     const toggleDropdown = () => {
         setToggle(!toggle);
     };
@@ -13,7 +13,7 @@ const FilterDropdown = ({ toggle, setToggle, setFilteredStatus }) => {
     return (
         <div className="dropdown">
             <button className="dropdown__title" onClick={toggleDropdown}>
-                <span>Filter</span>
+                <span>{filteredStatus[0].toUpperCase() + filteredStatus.substring(1)}</span>
                 <span>
                     <FontAwesomeIcon icon={faFilter} />
                 </span>
