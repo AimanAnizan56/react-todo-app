@@ -10,11 +10,16 @@ const App = () => {
     const [toggle, setToggle] = useState(false);
 
     useEffect(() => {
+        getFromLocal();
+    }, []);
+
+    useEffect(() => {
         document.body.addEventListener('click', toggleHandler);
     }, [toggle]);
 
     useEffect(() => {
         filterHandler();
+        saveToLocal();
     }, [todos, filteredStatus]);
 
     const toggleHandler = () => {
@@ -36,6 +41,17 @@ const App = () => {
                 setFilteredTodos(todos);
                 break;
         }
+    };
+
+    const getFromLocal = () => {
+        let item = localStorage.getItem('todosList');
+        if (item !== null) {
+            setTodos(JSON.parse(item));
+        }
+    };
+
+    const saveToLocal = () => {
+        localStorage.setItem('todosList', JSON.stringify(todos));
     };
 
     return (
