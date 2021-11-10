@@ -12,6 +12,7 @@
             max-width: 16.875rem;
             width: 100%;
             text-align: center;
+            cursor: var(--cursor-pointer);
             transition: all ease-in-out 200ms;
 
             @include breakpoint(large) {
@@ -39,6 +40,7 @@
 
         &__label {
             display: block;
+            cursor: var(--cursor-default);
             margin-bottom: 1rem;
         }
 

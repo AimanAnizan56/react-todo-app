@@ -14,6 +14,7 @@
         border-radius: 0.625rem;
         padding: 1.3rem;
         width: 100%;
+        cursor: var(--cursor-default);
 
         &-name {
             margin: unset;
@@ -33,7 +34,7 @@
                     all: unset;
                     color: var(--trash);
                     margin-right: 1rem;
-                    cursor: pointer;
+                    cursor: var(--cursor-pointer);
                     transition: all ease-in-out 150ms;
 
                     &:hover {
@@ -45,7 +46,7 @@
                     all: unset;
                     color: var(--check);
                     margin-right: 1rem;
-                    cursor: pointer;
+                    cursor: var(--cursor-pointer);
                     transition: all ease-in-out 150ms;
 
                     &:hover {
@@ -56,6 +57,7 @@
         }
 
         &-description {
+            cursor: var(--cursor-default);
             transition: all ease-in-out 300ms;
             &.strike {
                 text-decoration: line-through;

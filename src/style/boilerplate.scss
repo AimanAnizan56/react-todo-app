@@ -2,6 +2,7 @@ html {
     font-size: 100%;
     font-family: var(--font-poppins);
     box-sizing: border-box;
+    cursor: var(--cursor-default);
 }
 *,
 *::before,
@@ -22,6 +23,7 @@ input[type='text'] {
     border-radius: 0.3125rem;
     box-sizing: inherit;
     box-shadow: none;
+    cursor: var(--cursor-text);
     transition: all ease-in-out 200ms;
 }
 button {
