@@ -11,7 +11,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        cursor: pointer;
+        cursor: var(--cursor-pointer);
 
         &:hover {
             text-decoration: 0.2rem var(--orange) underline;
@@ -31,6 +31,7 @@
         transition: all ease-in-out 200ms;
         opacity: 0;
         visibility: hidden;
+        z-index: 100;
 
         &.toggle {
             opacity: 1;
@@ -40,7 +41,7 @@
 
         > li {
             padding: 0 0.2rem;
-            cursor: pointer;
+            cursor: var(--cursor-pointer);
 
             > button {
                 all: unset;
