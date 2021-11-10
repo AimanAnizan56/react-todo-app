@@ -4,9 +4,19 @@ import Todo from './Todos';
 const TodoList = ({ todos, setTodos }) => {
     return (
         <div className="todos">
-            {todos.map((todo) => (
-                <Todo key={todo.id} todo={todo} setTodos={setTodos} todos={todos} />
-            ))}
+            {todos.map((todo) => {
+                return (
+                    <Todo
+                        key={todo.id}
+                        id={todo.id}
+                        completed={todo.completed}
+                        name={todo.name}
+                        description={todo.description}
+                        setTodos={setTodos}
+                        todos={todos}
+                    />
+                );
+            })}
         </div>
     );
 };
