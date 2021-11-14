@@ -4,9 +4,9 @@ This simple react todo app created using `create-react-app` from [Create React A
 
 This project also use multiple package such as: <br>
 
-1. [`Font Awesome Icon`](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react)
-2. [`Node-Sass`](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
-3. [`shortid`](https://www.npmjs.com/package/shortid)
+1. [`Font Awesome Icon`](https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react) - For Icon
+2. [`Node-Sass`](https://create-react-app.dev/docs/adding-a-sass-stylesheet) - For styling
+3. [`shortid`](https://www.npmjs.com/package/shortid) - For generate unique id
 
 ## Available Scripts
 
